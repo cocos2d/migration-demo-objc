@@ -15,21 +15,15 @@
 
 // -----------------------------------------------------------------------
 
-@interface AppDelegate : CCAppDelegate
+@interface Credits : CCNode
+
+// -----------------------------------------------------------------------
+
++ (instancetype)creditsWithScene:(CCScene *)scene andDictionary:(NSDictionary *)dict;
 
 // -----------------------------------------------------------------------
 
 @end
-
-
-
-
-
-
-
-
-
-
 
 
 

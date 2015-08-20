@@ -1,11 +1,11 @@
 //
-//  Paddle.h
+//  ___FILENAME___
 //
-//  Created by : Lars Birkemose
-//  Project    : pong-objc
-//  Date       : 20/08/15
+//  Created by : ___FULLUSERNAME___
+//  Project    : ___PROJECTNAME___
+//  Date       : ___DATE___
 //
-//  Copyright (c) 2015 Cocos2D.
+//  Copyright (c) ___YEAR___ ___ORGANIZATIONNAME___.
 //  All rights reserved.
 //
 // -----------------------------------------------------------------
@@ -38,7 +38,7 @@ typedef NS_ENUM(NSUInteger, PaddleSide)
 
 + (instancetype)paddleWithSide:(PaddleSide)side;
 
-- (BOOL)validPosition:(CGPoint)position;
+- (BOOL)validTouchPosition:(CGPoint)position;
 
 // -----------------------------------------------------------------
 

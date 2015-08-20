@@ -1,11 +1,11 @@
 //
-//  Paddle.m
+//  ___FILENAME___
 //
-//  Created by : Lars Birkemose
-//  Project    : pong-objc
-//  Date       : 20/08/15
+//  Created by : ___FULLUSERNAME___
+//  Project    : ___PROJECTNAME___
+//  Date       : ___DATE___
 //
-//  Copyright (c) 2015 Cocos2D.
+//  Copyright (c) ___YEAR___ ___ORGANIZATIONNAME___.
 //  All rights reserved.
 //
 // -----------------------------------------------------------------
@@ -35,7 +35,7 @@
     
     _gameSize = [CCDirector sharedDirector].viewSize;
     _side = side;
-    float x = (side == PaddleSideLeft) ? kGamePaddleInset : _gameSize.width - kGamePaddleInset;
+    float x = (side == PaddleSideLeft) ? kGamePaddleInset * _gameSize.width : (1 - kGamePaddleInset) * _gameSize.width;
     _destination = _gameSize.height * 0.5;
     self.position = (CGPoint){x, _destination};
     
@@ -47,10 +47,10 @@
 
 // -----------------------------------------------------------------
 
-- (BOOL)validPosition:(CGPoint)position
+- (BOOL)validTouchPosition:(CGPoint)position
 {
-    if (_side == PaddleSideLeft) return (position.x < kGamePaddleTouchArea);
-    return (position.x > (_gameSize.width - kGamePaddleTouchArea));
+    if (_side == PaddleSideLeft) return (position.x < (kGamePaddleTouchArea * _gameSize.width));
+    return (position.x > ((1 - kGamePaddleTouchArea) * _gameSize.width));
 }
 
 // -----------------------------------------------------------------
@@ -69,7 +69,7 @@
     // move to destination at light speed
     // calculate remaining distance and step
     float remainingDistance = fabs(self.position.y - _destination);
-    float step = kGamePaddleSpeed * delta;
+    float step = kGamePaddleSpeed * _gameSize.height * delta;
 
     if (step > remainingDistance)
     {

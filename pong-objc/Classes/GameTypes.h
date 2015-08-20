@@ -1,26 +1,30 @@
 //
-//  GameTypes.h
+//  ___FILENAME___
 //
-//  Created by : Lars Birkemose
-//  Project    : pong-objc
-//  Date       : 20/08/15
+//  Created by : ___FULLUSERNAME___
+//  Project    : ___PROJECTNAME___
+//  Date       : ___DATE___
 //
-//  Copyright (c) 2015 Cocos2D.
+//  Copyright (c) ___YEAR___ ___ORGANIZATIONNAME___.
 //  All rights reserved.
 //
 // -----------------------------------------------------------------
 
+#define kGameColor                      [CCColor orangeColor]
+#define kGameLoadSceneColor             [CCColor colorWithRed:0.25 green:0.125 blue:0.0]
+#define kGameMainSceneColor             [CCColor colorWithRed:0.5 green:0.25 blue:0.0]
+
 #define kGrossiniJumpTime               1.0
 #define kGrossiniJumps                  5
 
-#define kGamePaddleInset                90
-#define kGamePaddleTouchArea            250
+#define kGamePaddleInset                0.14
+#define kGamePaddleTouchArea            0.25
 
-#define kGamePaddleSpeed                800
-#define kGameBallSpeed                  1200
+#define kGamePaddleSpeed                1.00
+#define kGameBallSpeed                  1.50
 
-#define kGameSpinFactor                 0.25
-#define kGameSpinRandomFactor           0.15
+#define kGameSpinFactor                 190
+#define kGameSpinRandomFactor           15
 
 #define kGameSliderEndStop              15
 

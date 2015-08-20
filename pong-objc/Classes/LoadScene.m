@@ -1,17 +1,18 @@
 //
-//  LoadScene.m
+//  ___FILENAME___
 //
-//  Created by : Lars Birkemose
-//  Project    : pong-objc
-//  Date       : 20/08/15
+//  Created by : ___FULLUSERNAME___
+//  Project    : ___PROJECTNAME___
+//  Date       : ___DATE___
 //
-//  Copyright (c) 2015 Cocos2D.
+//  Copyright (c) ___YEAR___ ___ORGANIZATIONNAME___.
 //  All rights reserved.
 //
 // -----------------------------------------------------------------
 
 #import "LoadScene.h"
 #import "MainScene.h"
+#import "GameTypes.h"
 
 // -----------------------------------------------------------------------
 
@@ -32,12 +33,21 @@
     // The thing is, that if this fails, your app will 99.99% crash anyways, so why bother
     // Just make an assert, so that you can catch it in debug
     NSAssert(self, @"Whoops");
+
+    // preload artwork needed for load scene
+    // NOTE!
+    // In this case, this is also the artwork for the entire app, but in real life this would probably not be the case
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"demo.plist"];
     
+    // get screen dimensions
+    CGSize size = [CCDirector sharedDirector].viewSize;
+
     // background
     CCSprite9Slice *background = [CCSprite9Slice spriteWithImageNamed:@"white_square.png"];
     background.anchorPoint = CGPointZero;
-    background.contentSize = [CCDirector sharedDirector].viewSize;
-    background.color = [CCColor grayColor];
+    background.position = CGPointZero;
+    background.contentSize = size;
+    background.color = kGameLoadSceneColor;
     [self addChild:background];
     
     // loading text
@@ -59,9 +69,6 @@
     _loadStep = 0;
     [self schedule:@selector(loadNext:) interval:0.033];
     
-    // enable touch handing
-    self.userInteractionEnabled = YES;
-    
     // done
 	return self;
 }
@@ -77,6 +84,11 @@
             // load ex textures here
             // our loading doesnt take time, so we add a small delay to simulate "real" loading
             usleep(500000);
+
+            // We already loaded this, because the load scene needs it, but just to demonstrate ...
+            // There is no memory penalty from loading it twice
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"demo.plist"];
+
             _progress.percentage = 40;
             break;
         }
@@ -84,6 +96,10 @@
         {
             // load ex audio here
             usleep(500000);
+            
+            [[OALSimpleAudio sharedInstance] preloadEffect:@"beep.wav"];
+            [[OALSimpleAudio sharedInstance] preloadEffect:@"game.wav"];
+            
             _progress.percentage = 50;
             break;
         }

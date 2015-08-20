@@ -1,11 +1,11 @@
 //
-//  MainScene.m
+//  ___FILENAME___
 //
-//  Created by : Lars Birkemose
-//  Project    : pong-objc
-//  Date       : 20/08/15
+//  Created by : ___FULLUSERNAME___
+//  Project    : ___PROJECTNAME___
+//  Date       : ___DATE___
 //
-//  Copyright (c) 2015 Cocos2D.
+//  Copyright (c) ___YEAR___ ___ORGANIZATIONNAME___.
 //  All rights reserved.
 //
 // -----------------------------------------------------------------
@@ -17,7 +17,7 @@
 #import "GameScene.h"
 #import "SetupScene.h"
 
-#import "CCCredits.h"
+#import "Credits.h"
 
 // -----------------------------------------------------------------------
 
@@ -47,14 +47,11 @@
     // get the size of the world
     CGSize size = [CCDirector sharedDirector].viewSize;
     
-    // Set the background to medium grey
-    self.colorRGBA = [CCColor colorWithRed:0.5 green:0.5 blue:0.5];
-    
     // add a solid colored node
     CCSprite9Slice *background = [CCSprite9Slice spriteWithImageNamed:@"white_square.png"];
     background.anchorPoint = CGPointZero;
     background.contentSize = size;
-    background.color = [CCColor orangeColor];
+    background.color = kGameMainSceneColor;
     [self addChild:background];
     
     // add grossini (we have missed him)
@@ -200,8 +197,8 @@
     NSString *filename = [[NSBundle mainBundle] pathForResource:@"credits.plist" ofType:nil];
     NSDictionary *creditsDict = [NSDictionary dictionaryWithContentsOfFile:filename];
     
-    // create list of CCCredits
-    CCCredits *credits = [CCCredits creditsWithScene:self andDictionary:creditsDict];
+    // create list of Credits
+    Credits *credits = [Credits creditsWithScene:self andDictionary:creditsDict];
     [self addChild:credits];
 }
 
