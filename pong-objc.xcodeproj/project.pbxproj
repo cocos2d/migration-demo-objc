@@ -212,8 +212,6 @@
 		0E4B71531B860ECD00CAA1FE /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B71521B860ECD00CAA1FE /* GameScene.m */; };
 		0E4B71551B860ECD00CAA1FE /* SetupScene.h in Resources */ = {isa = PBXBuildFile; fileRef = 0E4B71541B860ECD00CAA1FE /* SetupScene.h */; };
 		0E4B71571B860ECD00CAA1FE /* SetupScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B71561B860ECD00CAA1FE /* SetupScene.m */; };
-		0E4B71591B860ECD00CAA1FE /* CCCredits.h in Resources */ = {isa = PBXBuildFile; fileRef = 0E4B71581B860ECD00CAA1FE /* CCCredits.h */; };
-		0E4B715B1B860ECD00CAA1FE /* CCCredits.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B715A1B860ECD00CAA1FE /* CCCredits.m */; };
 		0E4B715D1B860ECD00CAA1FE /* Paddle.h in Resources */ = {isa = PBXBuildFile; fileRef = 0E4B715C1B860ECD00CAA1FE /* Paddle.h */; };
 		0E4B715F1B860ECD00CAA1FE /* Paddle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B715E1B860ECD00CAA1FE /* Paddle.m */; };
 		0E4B71611B860ECD00CAA1FE /* beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E4B71601B860ECD00CAA1FE /* beep.wav */; };
@@ -227,6 +225,7 @@
 		0E4B71711B860ECD00CAA1FE /* grossini_hi.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E4B71701B860ECD00CAA1FE /* grossini_hi.png */; };
 		0E4B71731B860ECD00CAA1FE /* white_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E4B71721B860ECD00CAA1FE /* white_square.png */; };
 		0E4B71751B860ECD00CAA1FE /* credits.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E4B71741B860ECD00CAA1FE /* credits.plist */; };
+		0E4B71801B86124D00CAA1FE /* Credits.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B717F1B86124D00CAA1FE /* Credits.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -692,8 +691,6 @@
 		0E4B71521B860ECD00CAA1FE /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GameScene.m; path = Classes/GameScene.m; sourceTree = "<group>"; };
 		0E4B71541B860ECD00CAA1FE /* SetupScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SetupScene.h; path = Classes/SetupScene.h; sourceTree = "<group>"; };
 		0E4B71561B860ECD00CAA1FE /* SetupScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SetupScene.m; path = Classes/SetupScene.m; sourceTree = "<group>"; };
-		0E4B71581B860ECD00CAA1FE /* CCCredits.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CCCredits.h; path = Classes/CCCredits.h; sourceTree = "<group>"; };
-		0E4B715A1B860ECD00CAA1FE /* CCCredits.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CCCredits.m; path = Classes/CCCredits.m; sourceTree = "<group>"; };
 		0E4B715C1B860ECD00CAA1FE /* Paddle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Paddle.h; path = Classes/Paddle.h; sourceTree = "<group>"; };
 		0E4B715E1B860ECD00CAA1FE /* Paddle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Paddle.m; path = Classes/Paddle.m; sourceTree = "<group>"; };
 		0E4B71601B860ECD00CAA1FE /* beep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = beep.wav; path = Resources/beep.wav; sourceTree = "<group>"; };
@@ -707,6 +704,8 @@
 		0E4B71701B860ECD00CAA1FE /* grossini_hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grossini_hi.png; path = Resources/grossini_hi.png; sourceTree = "<group>"; };
 		0E4B71721B860ECD00CAA1FE /* white_square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = white_square.png; path = Resources/white_square.png; sourceTree = "<group>"; };
 		0E4B71741B860ECD00CAA1FE /* credits.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = credits.plist; path = Resources/credits.plist; sourceTree = "<group>"; };
+		0E4B717E1B86124D00CAA1FE /* Credits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Credits.h; path = Classes/Credits.h; sourceTree = "<group>"; };
+		0E4B717F1B86124D00CAA1FE /* Credits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Credits.m; path = Classes/Credits.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1582,6 +1581,8 @@
 		0E4B71421B860ECC00CAA1FE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0E4B717E1B86124D00CAA1FE /* Credits.h */,
+				0E4B717F1B86124D00CAA1FE /* Credits.m */,
 				0E4B71431B860ECC00CAA1FE /* AppDelegate.h */,
 				0E4B71441B860ECC00CAA1FE /* AppDelegate.m */,
 				0E4B71461B860ECD00CAA1FE /* GameTypes.h */,
@@ -1593,8 +1594,6 @@
 				0E4B71521B860ECD00CAA1FE /* GameScene.m */,
 				0E4B71541B860ECD00CAA1FE /* SetupScene.h */,
 				0E4B71561B860ECD00CAA1FE /* SetupScene.m */,
-				0E4B71581B860ECD00CAA1FE /* CCCredits.h */,
-				0E4B715A1B860ECD00CAA1FE /* CCCredits.m */,
 				0E4B715C1B860ECD00CAA1FE /* Paddle.h */,
 				0E4B715E1B860ECD00CAA1FE /* Paddle.m */,
 				0E4B71601B860ECD00CAA1FE /* beep.wav */,
@@ -1704,7 +1703,6 @@
 				0E4B71751B860ECD00CAA1FE /* credits.plist in Resources */,
 				0E4B6E961B860ECA00CAA1FE /* Default-Landscape~ipad.png in Resources */,
 				0E4B6EAB1B860ECA00CAA1FE /* Icon-Small.png in Resources */,
-				0E4B71591B860ECD00CAA1FE /* CCCredits.h in Resources */,
 				0E4B6EA91B860ECA00CAA1FE /* Icon-Small-50.png in Resources */,
 				0E4B6E9D1B860ECA00CAA1FE /* Icon-72.png in Resources */,
 				0E4B6F981B860ECB00CAA1FE /* LICENSE_cocos2d.txt in Resources */,
@@ -1780,7 +1778,6 @@
 				0E4B6F4B1B860ECB00CAA1FE /* CCPhysicsJoint.m in Sources */,
 				0E4B6F5D1B860ECB00CAA1FE /* CCResponder.m in Sources */,
 				0E4B6F301B860ECA00CAA1FE /* CCNode+Debug.m in Sources */,
-				0E4B715B1B860ECD00CAA1FE /* CCCredits.m in Sources */,
 				0E4B6F281B860ECA00CAA1FE /* CCMotionStreak.m in Sources */,
 				0E4B6F821B860ECB00CAA1FE /* CCTexturePVR.m in Sources */,
 				0E4B708E1B860ECC00CAA1FE /* OALSimpleAudio.m in Sources */,
@@ -1862,6 +1859,7 @@
 				0E4B6FD31B860ECB00CAA1FE /* CCEffectContrast.m in Sources */,
 				0E4B703D1B860ECC00CAA1FE /* CCProfiling.m in Sources */,
 				0E4B70A01B860ECC00CAA1FE /* ALDevice.m in Sources */,
+				0E4B71801B86124D00CAA1FE /* Credits.m in Sources */,
 				0E4B708B1B860ECC00CAA1FE /* OALAudioTracks.m in Sources */,
 				0E4B70781B860ECC00CAA1FE /* OALAction.m in Sources */,
 				0E4B6F8F1B860ECB00CAA1FE /* CCTMXXMLParser.m in Sources */,
