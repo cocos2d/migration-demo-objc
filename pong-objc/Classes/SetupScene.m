@@ -33,7 +33,11 @@
     _soundVolume.positionType = CCPositionTypeNormalized;
     _soundVolume.position = (CGPoint){0.5, 0.6};
     _soundVolume.anchorPoint = (CGPoint){0.5, 0.5};
+    // **********************************
+    // TODO: CCSlider has been customized
+    // I had to customize the CCSlider class, as there was no way to add an offset to the slider positions.
     _soundVolume.endStop = kGameSliderEndStop;
+    // **********************************
     [self addChild:_soundVolume];
     
     CCLabelTTF *soundLabel = [CCLabelTTF labelWithString:@"Sound Volume" fontName:@"ArialMT" fontSize:32];
@@ -56,8 +60,6 @@
     musicLabel.fontColor = [CCColor colorWithRed:1.00 green:0.65 blue:0.00];
     [self addChild:musicLabel];
 
-    [self validateSetup];
-    
     // load setup
     NSUserDefaults *setup = [NSUserDefaults standardUserDefaults];
     _soundVolume.sliderValue = [setup floatForKey:kGameKeySoundVolume];
@@ -75,18 +77,6 @@
     [self addChild:back];
 
     return self;
-}
-
-// -----------------------------------------------------------------
-
-- (void)validateSetup
-{
-    // makes sure there is a valid setup
-    NSUserDefaults *setup = [NSUserDefaults standardUserDefaults];
-    // make sure keys exist
-    if ([setup objectForKey:kGameKeySoundVolume] == nil) [setup setFloat:1.0 forKey:kGameKeySoundVolume];
-    if ([setup objectForKey:kGameKeyMusicVolume] == nil) [setup setFloat:1.0 forKey:kGameKeyMusicVolume];
-    [setup synchronize];
 }
 
 // -----------------------------------------------------------------

@@ -107,6 +107,14 @@
         {
             // load animations, shaders etc
             usleep(500000);
+            
+            // makes sure there is a valid setup
+            NSUserDefaults *setup = [NSUserDefaults standardUserDefaults];
+            // make sure keys exist
+            if ([setup objectForKey:kGameKeySoundVolume] == nil) [setup setFloat:0.5 forKey:kGameKeySoundVolume];
+            if ([setup objectForKey:kGameKeyMusicVolume] == nil) [setup setFloat:0.5 forKey:kGameKeyMusicVolume];
+            [setup synchronize];
+
             _progress.percentage = 60;
             break;
         }
